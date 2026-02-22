@@ -8,8 +8,6 @@ import ADefaultImport from "./TodoList";
 function App() {
   return (
     <div>
-      <MyGreeter />
-      <ADefaultImport />
       <TodoList />
     </div>
   );
