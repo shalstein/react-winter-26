@@ -1,27 +1,16 @@
-function TodoList() {
-  const itemsToBuy = ["Coffee", "Tea", "Milk"];
-  const name = "Shalom";
-  const liStyle = {
-    color: "purple",
-    fontWeight: "bold",
-    marginBottom: "8px",
-  };
+function TodoList(props) {
+  const user = props.user;
   return (
     <>
-      <h1>{name}'s Shopping List</h1>
-      <ol
-        style={{
-          backgroundColor: "#f4f4f4",
-          padding: "20px",
-          borderRadius: "8px",
-          width: "300px",
-        }}
-      >
-        <li style={liStyle} id="itemid" className="item">
-          {itemsToBuy[0]}
+      <h1 id="h1" className={user.name}>
+        {user.name}'s Shopping List
+      </h1>
+      <ol style={user.theme.listTheme}>
+        <li style={user.theme.itemTheme} id="itemid" className="item">
+          {user.itemsToBuy[0]}
         </li>
-        <li style={liStyle}>{itemsToBuy[1]}</li>
-        <li style={liStyle}>{itemsToBuy[2]}</li>
+        <li style={user.theme.itemTheme}>{user.itemsToBuy[1]}</li>
+        <li style={user.theme.itemTheme}>{user.itemsToBuy[2]}</li>
       </ol>
     </>
   );
