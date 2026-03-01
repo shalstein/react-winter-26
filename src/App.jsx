@@ -8,7 +8,14 @@ import ADefaultImport from "./TodoList";
 import Gallery from "./Gallery";
 import Profile from "./Profile";
 function App() {
-  return <Profile />;
+  return (
+    <div>
+      <Profile />
+      <Profile />
+      <Profile />
+      <Profile />
+    </div>
+  );
 }
 
 export default App;
