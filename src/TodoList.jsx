@@ -10,9 +10,7 @@ export default function TodoList() {
         }}
       >
         <li>Go shopping</li>
-
         <li>Exercise</li>
-
         <li>Improve Video</li>
       </ul>
     </>
