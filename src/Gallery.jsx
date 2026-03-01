@@ -1,9 +1,14 @@
-export default function Gallery() {
-  const imgUrl = "https://placehold.co/600x400";
+import Profile from "./Profile";
+
+function Gallery() {
   return (
     <div>
-      <img src={imgUrl} alt="" />
-      <img src={imgUrl} alt="" />
+      <Profile />
+      <Profile />
+      <Profile />
+      <Profile />
     </div>
   );
 }
+
+export { Gallery };
