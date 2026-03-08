@@ -6,6 +6,7 @@ function App() {
     { name: "Go Shopping", completed: true },
     { name: "Exercise", completed: false },
     { name: "Improve Video", completed: false },
+    { name: "Homework", completed: false },
   ];
   return <TodoList tasks={tasks} />;
 }
