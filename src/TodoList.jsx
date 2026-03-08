@@ -1,18 +1,15 @@
-export default function TodoList() {
-  const name = "John";
+import TodoListTask from "./TodoListTask";
+
+export default function TodoList(props) {
+  let tasks = props.tasks;
+  let task1 = tasks[0];
+  let task2 = tasks[1];
+  let task3 = tasks[2];
   return (
-    <>
-      <h1>{name}'s Todo List</h1>
-      <ul
-        style={{
-          backgroundColor: "black",
-          color: "pink",
-        }}
-      >
-        <li>Go shopping</li>
-        <li>Exercise</li>
-        <li>Improve Video</li>
-      </ul>
-    </>
+    <ol>
+      <TodoListTask task={task1} />
+      <TodoListTask task={task2} />
+      <TodoListTask task={task3} />
+    </ol>
   );
 }
