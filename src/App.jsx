@@ -1,5 +1,8 @@
-import "./App.css";
-import TodoList from "./TodoList";
+import { useState } from "react";
+import TaskList from "./TaskList";
+import CounterButton from "./CounterButton";
+import MessageSender from "./MessageSender";
+import TrafficLight from "./TrafficLight";
 
 function App() {
   const tasks = [
@@ -8,7 +11,15 @@ function App() {
     { name: "Improve Video", completed: false },
     { name: "Homework", completed: true },
   ];
-  return <TodoList tasks={tasks} />;
+  return (
+    <>
+      <TrafficLight />
+      <div>
+        <CounterButton />
+        <MessageSender />
+      </div>
+    </>
+  );
 }
 
 export default App;
