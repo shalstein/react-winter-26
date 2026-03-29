@@ -1,17 +1,15 @@
 import { useState } from "react";
 
-export default function CounterButton() {
+export default function CounterButton({ children }) {
   const [counter, setCounter] = useState(0);
-  
+
   const incrementCounter = () => {
-    setCounter(counter + 5);
-    setTimeout(() => {
-      alert(counter);
-    }, 5000);
+    setCounter(counter + 1);
   };
   return (
     <>
       <button onClick={incrementCounter}>Count: {counter}</button>
+      {children}
     </>
   );
 }

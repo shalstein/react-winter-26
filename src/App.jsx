@@ -1,23 +1,21 @@
+import { recipeList } from "./recipesData";
+import RecipeSelector from "./RecipeSelector";
+import Recipes from "./Recipes";
+import SearchBar from "./SearchBar";
+import CounterButton from "./lesson0315/CounterButton";
 import { useState } from "react";
-import TaskList from "./TaskList";
-import CounterButton from "./CounterButton";
-import MessageSender from "./MessageSender";
-import TrafficLight from "./TrafficLight";
+import ButtonCounterWrong from "./ButtonCounterWrong";
 
 function App() {
-  const tasks = [
-    { name: "Go Shopping", completed: true },
-    { name: "Exercise", completed: false },
-    { name: "Improve Video", completed: false },
-    { name: "Homework", completed: true },
-  ];
+  const [searchWord, setSearchWord] = useState("");
   return (
     <>
-      <TrafficLight />
-      <div>
-        <CounterButton />
-        <MessageSender />
-      </div>
+      <ButtonCounterWrong />
+      <h1>Welcome To Recipes App</h1>
+      <br />
+      <SearchBar searchWord={searchWord} setSearchWord={setSearchWord} />
+      <br />
+      <Recipes recipes={recipeList} searchWord={searchWord} />
     </>
   );
 }
