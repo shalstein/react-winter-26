@@ -1,13 +1,22 @@
-import { recipeList } from "./recipesData";
-import RecipeSelector from "./RecipeSelector";
-import Recipes from "./Recipes";
-import SearchBar from "./SearchBar";
-import CounterButton from "./lesson0315/CounterButton";
+import Tasks from "./Tasks";
+import { AddTaskForm } from "./AddTaskForm";
+import tasksTodo from "./tasksTodo";
 import { useState } from "react";
-import ButtonCounterWrong from "./ButtonCounterWrong";
 
 function App() {
-  return <></>;
+  const [tasks, setTasks] = useState(tasksTodo);
+  const addTask = function (name) {
+    const newTask = { name: name, completed: false };
+    const newTasks = [...tasks, newTask];
+    setTasks(newTasks);
+  };
+  return (
+    <>
+      <h1>Todo List Example</h1>
+      <AddTaskForm addTask={addTask} />
+      <Tasks tasks={tasks} setTasks={setTasks} />
+    </>
+  );
 }
 
 export default App;
