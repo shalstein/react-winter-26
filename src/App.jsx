@@ -7,17 +7,7 @@ import { useState } from "react";
 import ButtonCounterWrong from "./ButtonCounterWrong";
 
 function App() {
-  const [searchWord, setSearchWord] = useState("");
-  return (
-    <>
-      <ButtonCounterWrong />
-      <h1>Welcome To Recipes App</h1>
-      <br />
-      <SearchBar searchWord={searchWord} setSearchWord={setSearchWord} />
-      <br />
-      <Recipes recipes={recipeList} searchWord={searchWord} />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
