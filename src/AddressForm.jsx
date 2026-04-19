@@ -1,8 +1,15 @@
+import { useState } from "react";
+
 export default function AddressForm({
   header = "Shipping Address",
   addressData,
   setAddressData,
 }) {
+  var city = "";
+  const [cityState, setCityState] = useState("");
+  console.log("rerendering");
+  console.log(cityState);
+  console.log(city);
   return (
     <>
       <h2>{header}</h2>
@@ -16,9 +23,11 @@ export default function AddressForm({
       <input
         value={addressData.city}
         placeholder="City"
-        onChange={(e) =>
-          setAddressData({ ...addressData, city: e.target.value })
-        }
+        onChange={(e) => {
+          city = e.target.value;
+          setCityState(e.target.value);
+          setAddressData({ ...addressData, city: e.target.value });
+        }}
       />
       <input
         onChange={(e) =>
